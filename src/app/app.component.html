@@ -1,0 +1,14 @@
+<h1>
+  {{title}}
+</h1>
+<h2>Hero list</h2>
+<ol>
+  <li *ngFor="let hero of heros">
+   <div>{{hero.name}} ({{hero.heroclass}}) <button (click)="removeHero(hero)">X</button></div>
+
+  </li>
+</ol>
+<h2>Add hero</h2>
+<input placeholder="Name" [(ngModel)]="newHero.name">
+<input placeholder="Class" [(ngModel)]="newHero.heroclass">
+<button (click)="addHero()">Add</button>
